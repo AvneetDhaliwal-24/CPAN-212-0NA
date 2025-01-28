@@ -8,10 +8,11 @@ details
 search page
 */
 
-import http from "http";
+import http from "http"; //importing http for creating server, fs for file system for retrieving or writing data to files and path for paths of files/folders  module
 import fs from "fs";
 import path from "path";
 
+//creates a server and handles request for different endpoint and returns the result
 const app = http.createServer((req, res) => {
     
     if(req.url === "/"){
@@ -44,6 +45,7 @@ const app = http.createServer((req, res) => {
     }
 });
 
+//listens for request at port 8000 or the one pre-assigned 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
