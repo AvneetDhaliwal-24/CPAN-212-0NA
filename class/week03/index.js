@@ -39,7 +39,7 @@ app.get("/search", (req, res) => {
     console.log(req.params);
     console.log(req.body);
     // console.log(req.url);
-    res.end("You came to the search route");
+    res.send("You came to the search route");
 });
 
 
@@ -52,7 +52,7 @@ app.get("/item/:itemID/:otherID", (req, res) => {
     console.log(req.params);
     console.log(req.body);
     // console.log(req.url);
-    res.end("You came to the item route");
+    res.send("You came to the item route");
 });
 
 const PORT = process.env.PORT || 8000;
