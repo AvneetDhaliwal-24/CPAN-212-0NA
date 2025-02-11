@@ -24,11 +24,11 @@ app.use(express.json());
 //in express, we pass variable in this specific order -> (req, res, next)
 
 
-// app.use(logger); // adds whatever is passed to the use method add this to all the routes/endpoint. This is application wide so it runs everywhere
+// app.use(logger); // adds whatever is passed to the use method, add this to all the routes/endpoint. This is application wide so it runs everywhere
 
 
 // routes
-app.get("/", logger, (req, res, ) => {
+app.get("/", logger, (req, res ) => {
     res.send("Welcome to our server");
 });
 
