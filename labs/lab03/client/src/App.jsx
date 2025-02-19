@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 
 
@@ -130,11 +131,11 @@ const App = () => {
 
 
   return (
-    <div >
-      <h3>Lab 3</h3>
+    <div className="mainContainer">
+      <h1 className="mainHeading">Lab 3</h1>
       <p>{message}</p>
       <h2>Fetch Single Random Image</h2>
-      <button onClick={fetchSingleFile}>Fetch Single File</button>
+      <button onClick={fetchSingleFile} className="buttons">Fetch Single File</button>
       {displayImage && (
         <div>
           <h3>Single File</h3>
@@ -148,10 +149,11 @@ const App = () => {
       <form onSubmit={handleSubmitSingleFile}>
         <h2>Upload Single File</h2>
         <input type="file" onChange={handleSingleFileChange} />
-        <button type="submit">Upload Single File</button>
+        <button type="submit" className="buttons">Upload Single File</button>
       </form>
 
-      <button onClick={fetchMutipleFiles}>Fetch Multiple Files</button>
+      <h2>Fetch Mutltiple Files</h2>
+      <button onClick={fetchMutipleFiles} className="buttons">Fetch Multiple Files</button>
       {
         displayImages.length > 0 ? (
           displayImages.map((imageURL, index) => (
@@ -162,12 +164,13 @@ const App = () => {
         ) : (<p>No images to display</p>)
       }
 
-      <button onClick={fetchDogImage}>Fetch Dog Image</button>
+      <h2>Fetch Dog Image</h2>
+      <button onClick={fetchDogImage} className="buttons">Fetch Dog Image</button>
       {
         displayDogImage && (
           <div>
             <img src={displayDogImage} style={{ width: "400px" }} />
-            <button onClick={saveDogImage}>Save Dog Image</button>
+            <button onClick={saveDogImage} className="buttons">Save Dog Image</button>
           </div>
         )
       }

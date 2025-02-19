@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #3A86FF;;
 }
 
 .logo {
@@ -41,6 +42,61 @@
   color: #888;
 }
 
-.mainHeading {
-  text-align: center;
+.buttons, input[type=file]::file-selector-button{
+  background-color:rgb(58, 134, 255);
+  color: white;
+  padding-top: 1%;
+   padding-bottom: 1%;
+   padding-left: 3%;
+   padding-right: 3%;
+  border-radius: 25px;
+  border-width: 0;
+  line-height: 2;
+  box-shadow: 0 4px 15px 0 #3A86FF;
+  /* box-shadow: #3A86FF 0 0px 0px 40px inset; */
+  margin: 1%;
+}
+
+.buttons:hover, input[type=file]::file-selector-button:hover{
+  cursor: pointer;
+  transform: scale(0.90) ;
+  box-shadow: 0 0 0 0 #3A86FF;
+}
+
+input{
+  display: block;
+  align-self: center;
+  margin: auto;
+}
+input[type=file]::file-selector-button{
+  box-shadow: none !important;
+}
+
+.mainContainer{
+  margin: auto;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1% 3% 1% 3%;
+
+}
+
+.mainHeading{
+  margin-top: 1%;
+}
+
+html, body, #root{
+  height: 97%;
+  min-height: fit-content;
+}
+
+img{
+  border: 8px solid wheat;
+  margin: 3% auto ;
+  display: block;
+}
+
+h2{
+  border-top: 2px solid black;
+  padding-top: 2%;
 }
