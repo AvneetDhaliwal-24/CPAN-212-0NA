@@ -3,7 +3,7 @@ const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 
-const recipe_router = require("./routers/recipe_router");
+const recipe_router = require("./routers/recipes_router");
 
 dotenv.config();
 
